@@ -13,6 +13,7 @@ public class Frames {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.manage().window().maximize();
 		driver.get("https://www.w3schools.com/js/tryit.asp?filename=tryjs_prompt");
+		driver.findElement(By.xpath("//button[text()='Try it']")).click();
 		driver.switchTo().frame("iframeResult");
 		Thread.sleep(2000);
 		// to click the ok on alert box
